@@ -1,16 +1,35 @@
 import logo from './logo.svg';
 import './App.css';
-import Logo from "./components/logo"
-import Links from "./components/links"
-import Button from "./components/Button";
+import List from "./components/list"
+import Li from "./components/LI"
 
 
 function App() {
+
+  const a="Mobile Operating System"
+  const  b="Mobile Manufactures"
+
+  const c=["Android","Blackberry","iPhone","Window Phone"]
+  
+  const d=["Samsang","HTC","Micromax","Apple"]
   return (
    <div className="container">
-  <Logo></Logo>
-  <Links> </Links> 
-  <Button></Button>
+ <List h1={a}/>
+
+  {c.map(function(el){
+    return (
+   <Li list={el}/>)
+    
+   })}
+ 
+
+
+ <List h1={b} />
+ {d.map(function(el){
+    return (
+      <Li list={el}/>)
+    
+   })}
 
    </div>
   
